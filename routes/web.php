@@ -1,20 +1,8 @@
 <?php
 
-use Developful\Zugzwang\Chess;
+use App\Http\Controllers\ChessController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-
-
-    return view('welcome');
-})->name('home');
-
-
-Route::get('/chess', function () {
-    $chess = new Chess();
-    $fen = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
-
-    $moves = $chess->getPossibleMoves($fen);
-
-    dd($moves);
-})->name('chess');
+Route::view('/', 'welcome')->name('home');
+Route::get('/chess/moves', [ChessController::class, 'moves'])->name('chess.moves');
+Route::post('/chess/move', [ChessController::class, 'move'])->name('chess.move');

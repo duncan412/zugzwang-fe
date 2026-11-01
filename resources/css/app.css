@@ -6,3 +6,92 @@
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+body {
+    background: #f6f5f1;
+    color: #222b27;
+    font-family: var(--font-sans);
+}
+
+.chess-app {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 32px 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.game-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    margin-top: 28px;
+}
+
+#myBoard {
+    width: min(100%, 560px);
+    flex-shrink: 0;
+}
+
+.game-panel {
+    flex: 1;
+    min-width: 0;
+}
+
+.game-panel h2 {
+    font-weight: 700;
+    margin: 24px 0 8px;
+}
+
+.game-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 6px;
+    background: #274c3b;
+    color: white;
+    padding: 10px 16px;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: wait;
+}
+
+button:focus-visible {
+    outline: 3px solid #b57922;
+    outline-offset: 3px;
+}
+
+.game-error {
+    color: #a12b20;
+}
+
+.game-hint {
+    margin: 24px 0;
+    color: #536158;
+}
+
+summary {
+    cursor: pointer;
+}
+
+#game-fen {
+    display: block;
+    overflow-wrap: anywhere;
+    margin-top: 8px;
+}
+
+@media (max-width: 800px) {
+    .game-layout {
+        flex-direction: column;
+    }
+}

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "47b26d81e9934f8724a5261475477f69",
+    "content-hash": "4cb371bebdd3a864c471d00bfd9ad420",
     "packages": [
         {
             "name": "brick/math",
@@ -134,27 +134,6 @@
                 }
             ],
             "time": "2024-02-09T16:56:22+00:00"
-        },
-        {
-            "name": "developful/zugzwang",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "../chess",
-                "reference": "a7b91d95a1202dc89e0d1a6e1c39c852d80d41e1"
-            },
-            "type": "project",
-            "autoload": {
-                "psr-4": {
-                    "Developful\\Zugzwang\\": "src/"
-                }
-            },
-            "license": [
-                "GPL-3.0-or-later"
-            ],
-            "transport-options": {
-                "relative": true
-            }
         },
         {
             "name": "dflydev/dot-access-data",
@@ -9432,9 +9411,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "developful/zugzwang": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
